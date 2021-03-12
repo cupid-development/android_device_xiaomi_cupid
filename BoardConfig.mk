@@ -11,3 +11,6 @@ include device/xiaomi/sm8450-common/BoardConfigCommon.mk
 include vendor/xiaomi/cupid/BoardConfigVendor.mk
 
 DEVICE_PATH := device/xiaomi/cupid
+
+# Screen density
+TARGET_SCREEN_DENSITY := 440
