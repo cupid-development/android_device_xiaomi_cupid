@@ -15,9 +15,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
 
 PRODUCT_PACKAGES += \
-    CupidWifiOverlay \
     FrameworksResCupid \
-    SystemUIResCupid
+    SystemUIResCupid \
+    WifiResCupid
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

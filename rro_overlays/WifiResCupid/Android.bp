@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "WifiResCupid",
+    device_specific: true
+}
