@@ -12,7 +12,7 @@ $(call inherit-product, vendor/xiaomi/cupid/cupid-vendor.mk)
 
 # Overlay
 PRODUCT_PACKAGES += \
-    CupidWifiOverlay \
+    ApertureResCupid \
     FrameworksResCupid \
     SettingsProviderResCupid \
     SystemUIResCupid \
