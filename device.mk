@@ -17,6 +17,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     ApertureResCupid \
     FrameworksResCupid \
+    NfcResCupid \
     SettingsResCupid \
     SystemUIResCupid \
     WifiResCupid
