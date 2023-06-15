@@ -14,6 +14,7 @@ $(call inherit-product, vendor/xiaomi/cupid/cupid-vendor.mk)
 PRODUCT_PACKAGES += \
     ApertureResCupid \
     FrameworksResCupid \
+    NfcResCupid \
     SettingsProviderResCupid \
     SystemUIResCupid \
     WifiResCupid
