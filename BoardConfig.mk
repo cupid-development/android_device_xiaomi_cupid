@@ -13,6 +13,7 @@ include vendor/xiaomi/cupid/BoardConfigVendor.mk
 DEVICE_PATH := device/xiaomi/cupid
 
 # Properties
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/properties/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
 
 # Screen density
