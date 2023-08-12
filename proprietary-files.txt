@@ -435,6 +435,7 @@ vendor/lib64/camera/com.qti.tuned.cupid_semco_imx707_wide.bin
 vendor/lib64/camera/com.qti.tuned.cupid_semco_imx766_wide.bin
 vendor/lib64/camera/com.qti.tuned.cupid_sunny_ov13b10_ultra.bin
 vendor/lib64/camera/com.qti.tuned.cupid_sunny_s5k5e9_macro.bin
+vendor/lib64/hw/com.qti.chi.override.so
 
 # Computer vision firmware
 vendor/firmware/evass-lt-21.b00
