@@ -16,6 +16,7 @@ PRODUCT_PACKAGES += \
     FrameworksResCupid \
     NfcResCupid \
     SettingsProviderResCupid \
+    SettingsResCupid \
     SystemUIResCupid \
     WifiResCupid
 
