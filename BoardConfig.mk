@@ -14,12 +14,13 @@ DEVICE_PATH := device/xiaomi/cupid
 
 # Kernel
 device_second_stage_modules := \
-	qcom_pm8008-regulator.ko \
-	fts_touch_spi.ko \
-	aw8697-haptic.ko
+    goodix_fod.ko \
+    qcom_pm8008-regulator.ko \
+    fts_touch_spi.ko \
+    aw8697-haptic.ko
 
 device_vendor_dlkm_exclusive_modules := \
-	cs35l41_dlkm.ko
+    cs35l41_dlkm.ko
 
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD += $(device_second_stage_modules)
 BOARD_VENDOR_KERNEL_MODULES_LOAD += $(device_second_stage_modules) $(device_vendor_dlkm_exclusive_modules)
