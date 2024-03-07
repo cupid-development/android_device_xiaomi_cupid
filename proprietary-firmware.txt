@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from cupid V14.0.4.0.TLCMIXM
+## are from cupid V816.0.3.0.ULCEUXM
 
 abl.img;AB
 aop.img;AB
