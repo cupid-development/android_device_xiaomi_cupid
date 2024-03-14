@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2022 The LineageOS Project
+     Copyright (C) 2024 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <integer name="config_udfps_illumination_transition_ms">0</integer>
+
     <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
     <string name="config_dozeUdfpsLongPressSensorType" translatable="false">org.lineageos.sensor.udfps</string>
 
@@ -21,6 +23,9 @@
          appended after the path string to interpret coordinates in dp instead of px units.
          Note that a physical cutout should be configured in pixels for the best results.
 
+         If the display supports multiple resolutions, please define the path config based on the
+         highest resolution so that it can be scaled correctly in each resolution.
+
          Example for a 10px x 10px square top-center cutout:
                 <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z</string>
          Example for a 10dp x 10dp square top-center cutout:
@@ -30,19 +35,31 @@
          -->
     <string name="config_mainBuiltInDisplayCutout" translatable="false">M -33 52 a 33 33 0 1 0 66 0 a 33 33 0 1 0 -66 0 Z</string>
 
-    <!--Like config_mainBuiltInDisplayCutout, but this path is used to report the
-        one single bounding rect per device edge to the app via
-        {@link DisplayCutout#getBoundingRect}. Note that this path should try to match the visual
-        appearance of the cutout as much as possible, and may be smaller than
-        config_mainBuiltInDisplayCutout
-        -->
-    <string name="config_mainBuiltInDisplayCutoutRectApproximation">M 0,0 H -33 V 87 H 33 V 0 H 0 Z</string>
+    <!-- Like config_mainBuiltInDisplayCutout, but this path is used to report the
+         one single bounding rect per device edge to the app via
+         {@link DisplayCutout#getBoundingRect}. Note that this path should try to match the visual
+         appearance of the cutout as much as possible, and may be smaller than
+         config_mainBuiltInDisplayCutout
+         -->
+    <string name="config_mainBuiltInDisplayCutoutRectApproximation" translatable="false">M 0,0 H -33 V 87 H 33 V 0 H 0 Z</string>
 
-    <!--Whether the display cutout region of the main built-in display should be forced to
-        black in software (to avoid aliasing or emulate a cutout that is not physically existent).
-        -->
+    <!-- Whether the display cutout region of the main built-in display should be forced to
+         black in software (to avoid aliasing or emulate a cutout that is not physically existent).
+         -->
     <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
 
-    <!-- How long it takes for the HW to start illuminating after the illumination is requested. -->
-    <integer name="config_udfps_illumination_transition_ms">0</integer>
+    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
+         when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
+         where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
+         and Strength as defined in Authenticators.java -->
+    <string-array name="config_biometric_sensors" translatable="false">
+        <item>0:2:15</item>
+    </string-array>
+
+    <!-- The properties of a UDFPS sensor in pixels, in the order listed below: -->
+    <integer-array name="config_udfps_sensor_props" translatable="false">
+        <item>540</item>
+        <item>2163</item>
+        <item>107</item>
+    </integer-array>
 </resources>
