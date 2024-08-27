@@ -20,6 +20,10 @@ PRODUCT_PACKAGES += \
     SystemUIResCupid \
     WifiResCupid
 
+# Powershare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare@1.0-service.default
+
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
