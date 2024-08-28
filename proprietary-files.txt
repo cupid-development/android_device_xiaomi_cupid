@@ -564,7 +564,7 @@ vendor/lib64/camera/fdconfigpreviewlite.bin
 vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/camera/libQnnHtpAltPrepV69Skel.so
-vendor/lib64/camera/libQnnHtpAltPrepV69Stub.so
+vendor/lib64/camera/libQnnHtpAltPrepV69Stub.so;MODULE_SUFFIX=-camera
 vendor/lib64/camera/plugins/com.xiaomi.plugin.anchor.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.arcsoftsll.so
 vendor/lib64/camera/plugins/com.xiaomi.plugin.capbokeh.so
