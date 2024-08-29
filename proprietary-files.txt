@@ -1,5 +1,10 @@
 # All unpinned blobs below are extracted from cupid V816.0.4.0.ULCMIXM
 
+# Current blobs with ELF checks disabled:
+# audio.primary.taro depends on vendor.qti.hardware.pal@1.0-impl, which is a gnu makefile target
+# libar-pal depends on libagmclient, which is a gnu makefile target
+# libcrussp depends on libagmmixer, which is a gnu makefile target
+
 # ACDB
 vendor/etc/acdbdata/Forte/Forte_acdb_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_workspaceFileXml.qwsp
@@ -82,10 +87,10 @@ vendor/etc/microphone_characteristics.xml
 vendor/etc/usecaseKvManager.xml
 
 # Audio
-vendor/lib64/hw/audio.primary.taro.so:vendor/lib64/hw/audio.primary.taro-cupid.so;FIX_SONAME
+vendor/lib64/hw/audio.primary.taro.so:vendor/lib64/hw/audio.primary.taro-cupid.so;DISABLE_CHECKELF;FIX_SONAME
 -vendor/lib64/libagm.so
--vendor/lib64/libar-pal.so
-vendor/lib64/libcrussp.so
+-vendor/lib64/libar-pal.so;DISABLE_CHECKELF
+vendor/lib64/libcrussp.so;DISABLE_CHECKELF
 vendor/lib64/libkaraokepal.so
 
 # Audio firmware
