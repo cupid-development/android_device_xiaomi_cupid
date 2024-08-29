@@ -4,6 +4,8 @@
 # audio.primary.taro depends on vendor.qti.hardware.pal@1.0-impl, which is a gnu makefile target
 # libar-pal depends on libagmclient, which is a gnu makefile target
 # libcrussp depends on libagmmixer, which is a gnu makefile target
+# libmialgo_pureShot depends on libcdsprpc and build is unable to resolve its symbols
+# libmorpho_ubwc, libTrueSight depends on NDK libnativewindow and build is unable to resolve its symbols
 
 # ACDB
 vendor/etc/acdbdata/Forte/Forte_acdb_cal.acdb
@@ -631,7 +633,7 @@ vendor/lib64/libSNPE.so
 vendor/lib64/libSnpeCpu.so;FIX_SONAME
 vendor/lib64/libSnpeGpu.so;FIX_SONAME
 vendor/lib64/libSnpeHtpV69Stub.so;FIX_SONAME
-vendor/lib64/libTrueSight.so
+vendor/lib64/libTrueSight.so;DISABLE_CHECKELF
 vendor/lib64/lib_sr_models.so
 vendor/lib64/libaidenoiser.so
 vendor/lib64/libalCFR.so
@@ -701,7 +703,7 @@ vendor/lib64/libmialgo_globalsaliency.so
 vendor/lib64/libmialgo_ie_capture.so
 vendor/lib64/libmialgo_ie_preview.so
 vendor/lib64/libmialgo_image_colourkeeping.so
-vendor/lib64/libmialgo_pureShot.so
+vendor/lib64/libmialgo_pureShot.so;DISABLE_CHECKELF
 vendor/lib64/libmialgo_pureView.so
 vendor/lib64/libmialgo_rfs.so
 vendor/lib64/libmialgo_sd.so
@@ -723,7 +725,7 @@ vendor/lib64/libmmcamera_lscv35.so
 vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmmcamera_mfnr_t4.so
 vendor/lib64/libmmcamera_pdpc.so
-vendor/lib64/libmorpho_ubwc.so
+vendor/lib64/libmorpho_ubwc.so;DISABLE_CHECKELF
 vendor/lib64/libmorpho_ultrazoom_eis.so
 vendor/lib64/libmorpho_video_stabilizer.so
 vendor/lib64/libmpbase.so
