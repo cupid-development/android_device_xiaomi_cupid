@@ -651,9 +651,9 @@ vendor/lib64/libAF.so
 vendor/lib64/libHISCppAlgos.so
 vendor/lib64/libQnnHtpAltPrepV69Stub.so
 vendor/lib64/libSNPE.so
-vendor/lib64/libSnpeCpu.so
-vendor/lib64/libSnpeGpu.so
-vendor/lib64/libSnpeHtpV69Stub.so
+vendor/lib64/libSnpeCpu.so;FIX_SONAME
+vendor/lib64/libSnpeGpu.so;FIX_SONAME
+vendor/lib64/libSnpeHtpV69Stub.so;FIX_SONAME
 vendor/lib64/libTrueSight.so
 vendor/lib64/lib_sr_models.so
 vendor/lib64/libaidenoiser.so
@@ -920,7 +920,7 @@ vendor/etc/mdss_dsi_l3_42_02_0a_dsc_cmd_mi.xml
 
 # Fingerprint
 odm/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so
-vendor/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.default.so
+vendor/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.goodix_fod.default.so;FIX_SONAME
 vendor/lib64/libgf_hal.so
 
 # Graphics (Adreno firmware)
