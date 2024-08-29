@@ -14,11 +14,17 @@ function blob_fixup() {
         vendor/etc/camera/pureShot_parameter.xml|vendor/etc/camera/pureView_parameter.xml)
             sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
             ;;
+        vendor/lib64/hw/audio.primary.taro-cupid.so)
+            "${PATCHELF_0_17_2}" --set-soname "audio.primary.taro-cupid.so" "${2}"
+            ;;
         vendor/lib64/hw/fingerprint.goodix_fod.default.so)
             "${PATCHELF_0_17_2}" --set-soname "fingerprint.goodix_fod.default.so" "${2}"
             ;;
         vendor/lib64/libcamximageformatutils.so)
             "${PATCHELF_0_17_2}" --replace-needed "vendor.qti.hardware.display.config-V2-ndk_platform.so" "vendor.qti.hardware.display.config-V2-ndk.so" "${2}"
+            ;;
+        vendor/lib64/libkaraokepal.so)
+            "${PATCHELF_0_17_2}" --replace-needed "audio.primary.taro.so" "audio.primary.taro-cupid.so" "${2}"
             ;;
         vendor/lib64/libSnpeCpu.so)
             "${PATCHELF_0_17_2}" --set-soname "libSnpeCpu.so" "${2}"
