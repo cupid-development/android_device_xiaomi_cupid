@@ -89,7 +89,7 @@ vendor/etc/microphone_characteristics.xml
 vendor/etc/usecaseKvManager.xml
 
 # Audio
-vendor/lib64/hw/audio.primary.taro.so:vendor/lib64/hw/audio.primary.taro-cupid.so;DISABLE_CHECKELF;FIX_SONAME
+vendor/lib64/hw/audio.primary.taro.so;DISABLE_CHECKELF
 vendor/lib64/libagm.so
 vendor/lib64/libar-pal.so;DISABLE_CHECKELF
 vendor/lib64/libcrussp.so;DISABLE_CHECKELF

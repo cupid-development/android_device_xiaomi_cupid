@@ -1,6 +1,3 @@
-# Audio
-ro.hardware.audio.primary=taro-cupid
-
 # Sensors
 ro.vendor.sensors.notifier.light_sensors.primary=5
 ro.vendor.sensors.xiaomi.udfps=true
