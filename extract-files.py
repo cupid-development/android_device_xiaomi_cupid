@@ -51,6 +51,17 @@ blob_fixups: blob_fixups_user_type = {
         b'/sys/class/touch/touch_dev/fod_press_status',
         b'/sys/class/touch/touch_dev/fod_finger_state',
     ),
+    (
+        'vendor/lib64/libTrueSight.so',
+        'vendor/lib64/libmorpho_ubwc.so',
+    ): blob_fixup()
+    .clear_symbol_version('AHardwareBuffer_allocate')
+    .clear_symbol_version('AHardwareBuffer_describe')
+    .clear_symbol_version('AHardwareBuffer_isSupported')
+    .clear_symbol_version('AHardwareBuffer_lock')
+    .clear_symbol_version('AHardwareBuffer_lockPlanes')
+    .clear_symbol_version('AHardwareBuffer_release')
+    .clear_symbol_version('AHardwareBuffer_unlock'),
     'vendor/lib64/libcamxcommonutils.so': blob_fixup().add_needed(
         'libprocessgroup_shim.so'
     ),
@@ -58,6 +69,11 @@ blob_fixups: blob_fixups_user_type = {
         'vendor.qti.hardware.display.config-V2-ndk_platform.so',
         'vendor.qti.hardware.display.config-V2-ndk.so',
     ),
+    'vendor/lib64/libmialgo_pureShot.so': blob_fixup()
+    .clear_symbol_version('remote_handle64_close')
+    .clear_symbol_version('remote_handle64_invoke')
+    .clear_symbol_version('remote_handle64_open')
+    .clear_symbol_version('remote_register_buf_attr'),
     'vendor/lib64/libmialgoengine.so': blob_fixup().add_needed(
         'libprocessgroup_shim.so'
     ),
