@@ -1,10 +1,14 @@
 # All unpinned blobs below are extracted from cupid V816.0.10.0.ULCMIXM
 
 # ACDB
-vendor/etc/acdbdata/Forte/Forte_acdb_cal.acdb
-vendor/etc/acdbdata/Forte/Forte_workspaceFileXml.qwsp
-vendor/etc/acdbdata/Forte_elus/Forte_elus_acdb_cal.acdb
-vendor/etc/acdbdata/Forte_elus/Forte_elus_workspaceFileXml.qwsp
+vendor/etc/acdbdata/Forte_elus/Forte_elus_acdb_cal.acdb:vendor/etc/acdbdata/waipio_mtp/Forte_elus_acdb_cal.acdb
+vendor/etc/acdbdata/Forte_elus/Forte_elus_workspaceFileXml.qwsp:vendor/etc/acdbdata/waipio_mtp/Forte_elus_workspaceFileXml.qwsp
+vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.36_enpu2.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.10.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.36_enpu2_comp.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.7.20_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd
+vendor/etc/acdbdata/nn_ns_models/fai__2.7.2_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd
+vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd
 
 # ADSP modules
 vendor/lib/rfsa/adsp/bm2n00.bin
