@@ -870,7 +870,7 @@ vendor/firmware/evautil64.b07
 vendor/firmware/evautil64.mdt
 
 # Display configs
-product/etc/displayconfig/display_id_4630946545580055170.xml:vendor/etc/displayconfig/display_id_4630946545580055170.xml
+product/etc/displayconfig/display_id_4630946545580055170.xml:vendor/etc/displayconfig/display_id_4630946545580055169.xml
 vendor/etc/display/qdcm_calib_data_xiaomi_42_02_0a_mp_cmd_mode_dsc_dsi_panel.json
 
 # Fingerprint
