@@ -1,10 +1,5 @@
 # All unpinned blobs below are extracted from cupid V816.0.10.0.ULCMIXM
 
-# Current blobs with ELF checks disabled:
-# audio.primary.taro depends on vendor.qti.hardware.pal@1.0-impl, which is a gnu makefile target
-# libar-pal depends on libagmclient, which is a gnu makefile target
-# libcrussp depends on libagmmixer, which is a gnu makefile target
-
 # ACDB
 vendor/etc/acdbdata/Forte/Forte_acdb_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_workspaceFileXml.qwsp
@@ -73,25 +68,6 @@ vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin
 vendor/lib/rfsa/adsp/misound_res_spk4ch.bin
-
-# Audio configs
-vendor/etc/audio/sku_taro/mixer_paths_overlay_dynamic.xml
-vendor/etc/audio/sku_taro/mixer_paths_overlay_static.xml
-vendor/etc/audio/sku_taro/mixer_paths_waipio_mtp.xml
-vendor/etc/audio/sku_taro/resourcemanager_waipio_mtp.xml
-vendor/etc/audio_cloud_control_white_list.xml
-vendor/etc/backend_conf.xml
-vendor/etc/card-defs.xml
-vendor/etc/kvh2xml.xml
-vendor/etc/microphone_characteristics.xml
-vendor/etc/usecaseKvManager.xml
-
-# Audio
-vendor/lib64/hw/audio.primary.taro.so;DISABLE_CHECKELF
-vendor/lib64/libagm.so
-vendor/lib64/libar-pal.so;DISABLE_CHECKELF
-vendor/lib64/libcrussp.so;DISABLE_CHECKELF
-vendor/lib64/libkaraokepal.so
 
 # Audio firmware
 vendor/firmware/B-cs35l41-dsp1-spk-cali.bin
