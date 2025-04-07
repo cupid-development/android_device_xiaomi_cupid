@@ -17,8 +17,8 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := 2201123G
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="cupid_global-user 14 UKQ1.230917.001 V816.0.10.0.ULCMIXM release-keys" \
-    BuildFingerprint=Xiaomi/cupid_global/cupid:14/UKQ1.230917.001/V816.0.10.0.ULCMIXM:user/release-keys \
+    BuildDesc="cupid_global-user 15 AQ3A.241006.001 OS2.0.1.0.VLCMIXM release-keys" \
+    BuildFingerprint=Xiaomi/cupid_global/cupid:15/AQ3A.241006.001/OS2.0.1.0.VLCMIXM:user/release-keys \
     DeviceProduct=cupid \
     SystemName=cupid_global
 
