@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2024 The LineageOS Project
+     Copyright (C) 2024-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -20,18 +20,6 @@
          -2 is invalid so setting will resort to int value specified above.
          Must be in the range specified by minimum and maximum. -->
     <item format="float" name="config_screenBrightnessSettingDefaultFloat" type="dimen">0.07496032</item>
-
-    <!-- Stability requirements in milliseconds for accepting a new brightness level.  This is used
-         for debouncing the light sensor.  Different constants are used to debounce the light sensor
-         when adapting to brighter or darker environments.  This parameter controls how quickly
-         brightness changes occur in response to an observed change in light level that exceeds the
-         hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
-
-    <!-- The maximum range of gamma adjustment possible using the screen
-         auto-brightness adjustment setting. -->
-    <fraction name="config_autoBrightnessAdjustmentMaxGamma">100.0%</fraction>
     <item format="float" name="config_screenBrightnessDimFloat" type="dimen">0.000915639</item>
 
     <!-- Array of light sensor lux values to define our levels for auto backlight brightness support.
@@ -293,118 +281,6 @@
         <item>985.7</item>
         <item>1000.0</item>
     </array>
-
-    <!-- Array of ambient lux threshold values. This is used for determining hysteresis constraint
-         values by calculating the index to use for lookup and then setting the constraint value
-         to the corresponding value of the array. The new brightening hysteresis constraint value
-         is the n-th element of config_ambientBrighteningThresholds, and the new darkening
-         hysteresis constraint value is the n-th element of config_ambientDarkeningThresholds.
-
-         The (zero-based) index is calculated as follows: (MAX is the largest index of the array)
-         condition                       calculated index
-         value < level[0]                0
-         level[n] <= value < level[n+1]  n+1
-         level[MAX] <= value             MAX+1 -->
-    <integer-array name="config_ambientThresholdLevels">
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>20</item>
-        <item>30</item>
-        <item>40</item>
-        <item>50</item>
-        <item>60</item>
-        <item>70</item>
-        <item>80</item>
-        <item>90</item>
-        <item>100</item>
-        <item>200</item>
-        <item>300</item>
-        <item>400</item>
-        <item>500</item>
-        <item>1000</item>
-        <item>2000</item>
-        <item>3000</item>
-        <item>4000</item>
-    </integer-array>
-
-    <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
-         percent. The length of this array is assumed to be one greater than
-         config_ambientThresholdLevels. The brightening threshold is calculated as
-         lux * (1.0f + CONSTRAINT_VALUE). When the current lux is higher than this threshold,
-         the screen brightness is recalculated. See the config_ambientThresholdLevels
-         description for how the constraint value is chosen. -->
-    <integer-array name="config_ambientBrighteningThresholds">
-        <item>5186</item>
-        <item>4333</item>
-        <item>3666</item>
-        <item>2999</item>
-        <item>2759</item>
-        <item>2519</item>
-        <item>2279</item>
-        <item>2039</item>
-        <item>1799</item>
-        <item>799</item>
-        <item>527</item>
-        <item>499</item>
-        <item>470</item>
-        <item>517</item>
-        <item>565</item>
-        <item>612</item>
-        <item>660</item>
-        <item>708</item>
-        <item>742</item>
-        <item>636</item>
-        <item>582</item>
-        <item>549</item>
-        <item>369</item>
-        <item>294</item>
-        <item>269</item>
-        <item>220</item>
-        <item>220</item>
-    </integer-array>
-
-    <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
-         percent. The length of this array is assumed to be one greater than
-         config_ambientThresholdLevels. The darkening threshold is calculated as
-         lux * (1.0f - CONSTRAINT_VALUE). When the current lux is lower than this threshold,
-         the screen brightness is recalculated. See the config_ambientThresholdLevels
-         description for how the constraint value is chosen. -->
-    <integer-array name="config_ambientDarkeningThresholds">
-        <item>525</item>
-        <item>683</item>
-        <item>666</item>
-        <item>650</item>
-        <item>640</item>
-        <item>630</item>
-        <item>620</item>
-        <item>610</item>
-        <item>600</item>
-        <item>500</item>
-        <item>500</item>
-        <item>440</item>
-        <item>385</item>
-        <item>382</item>
-        <item>379</item>
-        <item>376</item>
-        <item>373</item>
-        <item>371</item>
-        <item>367</item>
-        <item>387</item>
-        <item>397</item>
-        <item>403</item>
-        <item>380</item>
-        <item>345</item>
-        <item>333</item>
-        <item>283</item>
-        <item>283</item>
-    </integer-array>
 
     <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
     <string name="config_dozeUdfpsLongPressSensorType" translatable="false">org.lineageos.sensor.udfps</string>
